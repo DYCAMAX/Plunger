@@ -49,6 +49,9 @@ class ModFramework (QMainWindow):
         aide_menu = menu_bar.addMenu("Help")
         aide_menu.addAction("À propos")
 
+        aide_menu = menu_bar.addMenu("About Us")
+        aide_menu.addAction("À propos")
+
         central_widget.setLayout(layout)
 
     def open_file(self):
