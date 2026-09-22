@@ -7,9 +7,9 @@ from PyQt5.QtWidgets import (
     QSizePolicy, QMainWindow, 
 )
 from settings import Preference
+from About import propos
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import Qt
-
 
 # Specification de la fénétre
 class ModFramework (QMainWindow):
@@ -38,28 +38,44 @@ class ModFramework (QMainWindow):
         ouvrir_action = file_menu.addAction("Compile")
         ouvrir_action.triggered.connect(self.open_file)
 
+        ouvrir_action = file_menu.addAction("Save the project")
+        ouvrir_action.triggered.connect(self.save_folders)
+
+        ouvrir_action = file_menu.addAction("Load the project")
+        ouvrir_action.triggered.connect(self.load_folders)
+
         quitter_action = file_menu.addAction("Quitter")
         quitter_action.triggered.connect(self.close)
 
         options_menu = menu_bar.addMenu("Settings")
 
-        son_action = options_menu.addAction("Preference")
-        son_action.triggered.connect(self.open_preference)
+        Pref_action = options_menu.addAction("Preference")
+        Pref_action.triggered.connect(self.open_preference)
 
         aide_menu = menu_bar.addMenu("Help")
-        aide_menu.addAction("À propos")
 
-        aide_menu = menu_bar.addMenu("About Us")
-        aide_menu.addAction("À propos")
+        aide_menu = aide_menu.addAction("About Us")
+        aide_menu.triggered.connect(self.open_propos)
 
         central_widget.setLayout(layout)
 
+    # Section definition 
     def open_file(self):
-      file, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File (*.bf *.)")
+      file, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File and Bink Video  (*.bf *.bik*)", )
 
     def open_preference(self):
       self.preference = Preference()
       self.preference.show()
+
+    def open_propos(self):
+       self.open_propos = propos
+       self.open_propos.show()
+
+    def save_folders(self):
+       folders, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File and Bink Video  (*.bf *.bik*)", )
+
+    def load_folders(self):
+       folders, _ = QFileDialog.getOpenFileName(self, "choose your folders")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
