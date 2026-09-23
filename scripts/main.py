@@ -1,10 +1,12 @@
+import os
 import sys
 from PyQt5.QtWidgets import (
     QApplication, QWidget, 
     QPushButton, QVBoxLayout,
     QFileDialog, QLabel, 
     QHBoxLayout, QSpacerItem, 
-    QSizePolicy, QMainWindow, 
+    QSizePolicy, QMainWindow,
+    QTreeWidgetItem
 )
 from settings import Preference
 from About import propos
@@ -86,6 +88,22 @@ class ModFramework (QMainWindow):
 
     def load_folders(self):
        folders, _ = QFileDialog.getOpenFileName(self, "choose your folders")
+
+    def load_fucking_structure(startpath, tree):
+       """
+       Load FUCKING structure tree
+       :param startpath: 
+       :param tree: 
+       :return: 
+       """
+       for element in os.listdir(startpath):
+          path_info = startpath + "/" + element
+          parent_itm = QTreeWidgetItem(tree, [os.path.basename(element)])
+          if os.path.isdir(path_info):
+              load_fucking_structure(path_info, parent_itm)
+              parent_itm.setIcon(0, QIcon('assets/folder.ico'))
+          else:
+              parent_itm.setIcon(0, QIcon('assets/file.ico'))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
