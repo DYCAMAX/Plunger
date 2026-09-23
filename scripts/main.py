@@ -22,14 +22,18 @@ class ModFramework (QMainWindow):
         QIcon("/images/Rabbids Mod Framework icon.png")
         )
 
+        # Pour le texte centré
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout()
         label = QLabel("Please select a file, you want to replace")
         label.setAlignment(Qt.AlignCenter)
         layout.addWidget(label)
-        
-        menu_bar = self.menuBar()                          
+
+        # Creation du menu bar 
+        menu_bar = self.menuBar()
+
+        # Création du menu "file"                          
         file_menu = menu_bar.addMenu("File")
 
         ouvrir_action = file_menu.addAction("Open folders")
