@@ -32,7 +32,7 @@ class ModFramework (QMainWindow):
         menu_bar = self.menuBar()                          
         file_menu = menu_bar.addMenu("File")
 
-        ouvrir_action = file_menu.addAction("Open")
+        ouvrir_action = file_menu.addAction("Open folders")
         ouvrir_action.triggered.connect(self.open_file)
 
         ouvrir_action = file_menu.addAction("Compile")
@@ -42,6 +42,12 @@ class ModFramework (QMainWindow):
         ouvrir_action.triggered.connect(self.save_folders)
 
         ouvrir_action = file_menu.addAction("Load the project")
+        ouvrir_action.triggered.connect(self.load_folders)
+
+        ouvrir_action = file_menu.addAction("Project recents")
+        ouvrir_action.triggered.connect(self.load_folders)
+
+        ouvrir_action = file_menu.addAction("Convert File")
         ouvrir_action.triggered.connect(self.load_folders)
 
         quitter_action = file_menu.addAction("Quitter")
@@ -54,9 +60,12 @@ class ModFramework (QMainWindow):
 
         aide_menu = menu_bar.addMenu("Help")
 
-        aide_menu = aide_menu.addAction("About Us")
+        aide_menu = aide_menu.addAction("About")
         aide_menu.triggered.connect(self.open_propos)
 
+        aide_menu = aide_menu.addAction("Report a Bug")
+        aide_menu.triggered.connect(self.open_propos)
+        
         central_widget.setLayout(layout)
 
     # Section definition 
