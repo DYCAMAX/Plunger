@@ -37,7 +37,7 @@ Maybe one day I release this in macos.
 - In dolphin emulator, press click right on your game and select "Start with Riivolution Patches....."
   ![](assets/start_with_riivolution_dolphin.png)
 - select your riivolution XML of your mod and start the game.
-## Real Hardware (Wii)
+## Real Hardware (Wii/vWii)
 (Before Started) You need a Wii 4.3 Hacked, Homebrew Launcher and the wad riivolution
 - Launch Riivolution WAD (in Homebrew Launcher or channel with your Rayman Raving Rabbids 1 Disc in your console
 - Press LAUNCH !!!
