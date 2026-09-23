@@ -1,17 +1,20 @@
 import os
 import sys
+
 from PyQt5.QtWidgets import (
     QApplication, QWidget, 
     QPushButton, QVBoxLayout,
     QFileDialog, QLabel, 
     QHBoxLayout, QSpacerItem, 
     QSizePolicy, QMainWindow,
-    QTreeWidgetItem
+    QTreeWidgetItem, QTreeView,
+    QFileSystemModel, QFileIconProvider, 
 )
 from settings import Preference
+from explorer import ExplorerFolders
 from About import propos
 from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QDir
 
 # Specification de la fénétre
 class ModFramework (QMainWindow):
@@ -19,7 +22,7 @@ class ModFramework (QMainWindow):
 
         super().__init__()
         self.setWindowTitle("Rabbids Mod Framework")
-        self.setGeometry(100, 100, 800, 600)
+        self.setGeometry(100, 100, 1280, 800)
         self.setWindowIcon(
         QIcon("/images/Rabbids Mod Framework icon.png")
         )
@@ -39,10 +42,10 @@ class ModFramework (QMainWindow):
         file_menu = menu_bar.addMenu("File")
 
         ouvrir_action = file_menu.addAction("Open folders")
-        ouvrir_action.triggered.connect(self.open_file)
+        ouvrir_action.triggered.connect(self.open_folders)
 
         ouvrir_action = file_menu.addAction("Compile")
-        ouvrir_action.triggered.connect(self.open_file)
+        ouvrir_action.triggered.connect(self.open_folders)
 
         ouvrir_action = file_menu.addAction("Save the project")
         ouvrir_action.triggered.connect(self.save_folders)
@@ -72,8 +75,10 @@ class ModFramework (QMainWindow):
         central_widget.setLayout(layout)
 
     # Section definition 
-    def open_file(self):
-      file, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File and Bink Video  (*.bf *.bik*)", )
+    def open_folders(self):
+      dir_ = QtWidgets.QFileDialog.getExistingDirectory(None, 'Select project folder:', 'F:\\', QtWidgets.QFileDialog.ShowDirsOnly)
+      self.merde = ExplorerFolders
+      self.merde.show()
 
     def open_preference(self):
       self.preference = Preference()
@@ -85,26 +90,14 @@ class ModFramework (QMainWindow):
 
     def save_folders(self):
        folders, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File and Bink Video  (*.bf *.bik*)", )
+       self.merde = ExplorerFolders
+       self.merde.show()
 
     def load_folders(self):
        folders, _ = QFileDialog.getOpenFileName(self, "choose your folders")
-
-    def load_fucking_structure(startpath, tree):
-       """
-       Load FUCKING structure tree
-       :param startpath: 
-       :param tree: 
-       :return: 
-       """
-       for element in os.listdir(startpath):
-          path_info = startpath + "/" + element
-          parent_itm = QTreeWidgetItem(tree, [os.path.basename(element)])
-          if os.path.isdir(path_info):
-              load_fucking_structure(path_info, parent_itm)
-              parent_itm.setIcon(0, QIcon('assets/folder.ico'))
-          else:
-              parent_itm.setIcon(0, QIcon('assets/file.ico'))
-
+       self.merde = ExplorerFolders
+       self.merde.show()
+    
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = ModFramework()
