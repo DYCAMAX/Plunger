@@ -62,13 +62,10 @@ class ModFramework (QMainWindow):
         Pref_action = options_menu.addAction("Preference")
         Pref_action.triggered.connect(self.open_preference)
 
-        aide_menu = menu_bar.addMenu("Help")
+        fuck_menu = menu_bar.addMenu("Help")
 
-        aide_menu = aide_menu.addAction("About")
-        aide_menu.triggered.connect(self.open_propos)
-
-        aide_menu = aide_menu.addAction("Report a Bug")
-        aide_menu.triggered.connect(self.open_propos)
+        fuck_menu = fuck_menu.addAction("About")
+        fuck_menu.triggered.connect(self.open_propos)
         
         central_widget.setLayout(layout)
 
