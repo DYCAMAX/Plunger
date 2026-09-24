@@ -13,7 +13,9 @@ os.makedirs("Test 2/contents/HomeButton2") # si le mod en a besoin
 # Copier les fichiers important comme les fichiers .xml de riivolution par exemple
 shutil.copy('mods/riivolution files/Rayman Raving Rabbids.xml', 'Test 2/riivolution/')
 shutil.copy('mods/riivolution files/RRR1.xml', 'Test 2/riivolution/')
-shutil.copytree('.gitignore/Rayman Raving Rabbids 1/DATA/files', 'Test 2/contents/')
+
+# juste du TEST de copiage de fichier
+shutil.copytree('Rayman_Raving_Rabbids_1/DATA/files', 'Test 2/contents/')
 
 
             

@@ -9,6 +9,7 @@ from PyQt5.QtWidgets import (
     QSizePolicy, QMainWindow,
     QTreeWidgetItem, QTreeView,
     QFileSystemModel, QFileIconProvider, 
+    QAction, QActionGroup
 )
 from settings import Preference
 from explorer import ExplorerFolders
@@ -71,6 +72,9 @@ class ModFramework (QMainWindow):
 
         fuck_menu = fuck_menu.addAction("About")
         fuck_menu.triggered.connect(self.open_propos)
+
+        fuck_menu = fuck_menu.addAction("Report a Bug")
+        fuck_menu.triggered.connect(self.report)
         
         central_widget.setLayout(layout)
 
@@ -97,6 +101,9 @@ class ModFramework (QMainWindow):
        folders, _ = QFileDialog.getOpenFileName(self, "choose your folders")
        self.merde = ExplorerFolders
        self.merde.show()
+
+    def report(self):
+       open 
     
 if __name__ == "__main__":
     app = QApplication(sys.argv)
