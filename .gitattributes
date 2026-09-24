@@ -1,0 +1,4 @@
+# Fix les langue
+*.py linguist-language=Python
+*cpp linguist-language=C++
+*.h  linguist-language=C
