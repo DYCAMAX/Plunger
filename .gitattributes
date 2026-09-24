@@ -1,4 +1,4 @@
 # Fix les langue
-*.py linguist-language=Python
-*cpp linguist-language=C++
-*.h  linguist-language=C
+*.py linguist-detectable=true
+*cpp linguist-detectable=true
+*.h  linguist-detectable=true
