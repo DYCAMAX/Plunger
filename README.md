@@ -1,4 +1,4 @@
-![image alt](https://github.com/DYCAMAX/Rabbids-Mod-Framework/blob/1fa272abc8d884e950fd5b63c642296d5e16ed64/Rabbids%20Mod%20Framework%20Logo.png)
+![image alt](images/Plunger_Logo.png)
 Plunger is a tool that allows you to create a mod on Rayman Raving Rabbids (Wii) and soon all other Rabbids games officially available on Wii. (This Project is not associated with Ubisoft or Nintendo)
 # Installation Guide
 Requirements:
