@@ -22,10 +22,10 @@ class ModFramework (QMainWindow):
     def __init__(self):
 
         super().__init__()
-        self.setWindowTitle("Rabbids Mod Framework")
+        self.setWindowTitle("Plunger")
         self.setGeometry(100, 100, 1280, 800)
         self.setWindowIcon(
-        QIcon("/images/Rabbids Mod Framework icon.png")
+        QIcon("/images/Plunger icon.png")
         )
 
         # Pour le texte centré

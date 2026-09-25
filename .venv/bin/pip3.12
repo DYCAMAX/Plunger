@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/dylan/Documents/Programming/Rabbids Mod Framework/.venv/bin/python" "$0" "$@"
+'''exec' "/home/dylan/Documents/Programming/Plunger/.venv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

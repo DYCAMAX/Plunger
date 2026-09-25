@@ -13,6 +13,6 @@ class propos(QWidget):
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout()
-        label = QLabel("Rabbids Mod Framework is a tool for modders, you can create mod for Rayman Raving Rabbids 1 (Wii) and coming for all Rabbids games ever released.")
+        label = QLabel("Plunger is a tool for modders, you can create mod for Rayman Raving Rabbids 1 (Wii) and coming for all Rabbids games ever released.")
         label.setAlignment(Qt.AlignCenter)
         layout.addWidget(label)
