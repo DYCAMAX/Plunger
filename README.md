@@ -1,5 +1,5 @@
 ![image alt](https://github.com/DYCAMAX/Rabbids-Mod-Framework/blob/1fa272abc8d884e950fd5b63c642296d5e16ed64/Rabbids%20Mod%20Framework%20Logo.png)
-Rabbids Mod Framework is a tool that allows you to create a mod on Rayman Raving Rabbids (Wii) and soon all other Rabbids games officially available on Wii. (This Project is not associated with Ubisoft or Nintendo)
+Plunger is a tool that allows you to create a mod on Rayman Raving Rabbids (Wii) and soon all other Rabbids games officially available on Wii. (This Project is not associated with Ubisoft or Nintendo)
 # Installation Guide
 Requirements:
 - [Dolphin](https://dolphin-emu.org/?nocr=true) or equivalent
@@ -27,10 +27,10 @@ Maybe one day I release this in macos.
 ## Extract Disc
 - In Dolphin emulator, extract entire disc of the game (RRR1).
   ![](assets/dolphin_extract_disc.png)
-- in Rabbids Mod Framework, you can open rayman 4.bf where almost totally of the game is stocked (Textures, Models etc....) or .bik files
+- in Plunger, you can open rayman 4.bf where almost totally of the game is stocked (Textures, Models etc....) or .bik files
 - And now you can mod Rayman Raving Rabbids (Wii) !!!!
 ## Compile and Launch
-- In Rabbids Mod Framework, press file and compile
+- In Plunger, press file and compile
 - put the name of your mod
 - Press compile, and whan it is finish, your mod compatible riivolution appear in directory ./mods
 ## Dolphin Emulator
