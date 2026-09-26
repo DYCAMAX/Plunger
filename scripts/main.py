@@ -26,7 +26,7 @@ class ModFramework (QMainWindow):
         super().__init__()
         self.setWindowTitle("Plunger")
         self.setGeometry(100, 100, 1280, 800)
-        self.setWindowIcon(QIcon("/images/Plunger icon.png"))
+        self.setWindowIcon(QIcon("/images/Plunger_icon.png"))
 
         # Pour le texte centré
         central_widget = QWidget()
