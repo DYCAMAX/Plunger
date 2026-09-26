@@ -1,5 +1,6 @@
 import os
 import sys
+import webbrowser
 
 from PyQt5.QtWidgets import (
     QApplication, QWidget, 
@@ -11,6 +12,7 @@ from PyQt5.QtWidgets import (
     QFileSystemModel, QFileIconProvider, 
     QAction, QActionGroup
 )
+
 from settings import Preference
 from explorer import ExplorerFolders
 from About import propos
@@ -24,9 +26,7 @@ class ModFramework (QMainWindow):
         super().__init__()
         self.setWindowTitle("Plunger")
         self.setGeometry(100, 100, 1280, 800)
-        self.setWindowIcon(
-        QIcon("/images/Plunger icon.png")
-        )
+        self.setWindowIcon(QIcon("/images/Plunger icon.png"))
 
         # Pour le texte centré
         central_widget = QWidget()
@@ -68,19 +68,19 @@ class ModFramework (QMainWindow):
         Pref_action = options_menu.addAction("Preference")
         Pref_action.triggered.connect(self.open_preference)
 
-        fuck_menu = menu_bar.addMenu("Help")
+        file_menu = menu_bar.addMenu("Help")
 
-        fuck_menu = fuck_menu.addAction("About")
+        fuck_menu = file_menu.addAction("About")
         fuck_menu.triggered.connect(self.open_propos)
 
-        fuck_menu = fuck_menu.addAction("Report a Bug")
+        fuck_menu = file_menu.addAction("Report a Bug")
         fuck_menu.triggered.connect(self.report)
         
         central_widget.setLayout(layout)
 
     # Section definition 
     def open_folders(self):
-      dir_ = QtWidgets.QFileDialog.getExistingDirectory(None, 'Select project folder:', 'F:\\', QtWidgets.QFileDialog.ShowDirsOnly)
+      dir_ = QFileDialog.getExistingDirectory(None, 'Select project folder:', 'F:\\', QFileDialog.ShowDirsOnly)
       self.merde = ExplorerFolders
       self.merde.show()
 
@@ -89,8 +89,8 @@ class ModFramework (QMainWindow):
       self.preference.show()
 
     def open_propos(self):
-       self.open_propos = propos
-       self.open_propos.show()
+      self.propos = propos()
+      self.propos.show()
 
     def save_folders(self):
        folders, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File and Bink Video  (*.bf *.bik*)", )
@@ -103,7 +103,8 @@ class ModFramework (QMainWindow):
        self.merde.show()
 
     def report(self):
-       open 
+       url = "https://github.com/DYCAMAX/Plunger/issues/new"
+       webbrowser.open(url)
     
 if __name__ == "__main__":
     app = QApplication(sys.argv)

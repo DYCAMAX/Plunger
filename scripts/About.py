@@ -8,8 +8,9 @@ class propos(QWidget):
         super().__init__()
 
         self.setWindowTitle("About US")
-        self.size(800, 700)
+        self.size(600, 400)
 
+        # Pour les Texts
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout()
