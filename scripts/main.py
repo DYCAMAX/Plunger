@@ -16,6 +16,7 @@ from PyQt5.QtWidgets import (
 from settings import Preference
 from explorer import ExplorerFolders
 from About import propos
+from Convert import convert
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import Qt, QDir
 
@@ -58,7 +59,7 @@ class ModFramework (QMainWindow):
         ouvrir_action.triggered.connect(self.load_folders)
 
         ouvrir_action = file_menu.addAction("Convert File")
-        ouvrir_action.triggered.connect(self.load_folders)
+        ouvrir_action.triggered.connect(self.convert)
 
         quitter_action = file_menu.addAction("Quitter")
         quitter_action.triggered.connect(self.close)
@@ -92,6 +93,10 @@ class ModFramework (QMainWindow):
       self.propos = propos()
       self.propos.show()
 
+    def convert(self):
+       self.fuck = convert
+       self.fuck.show
+
     def save_folders(self):
        folders, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File and Bink Video  (*.bf *.bik*)", )
        self.merde = ExplorerFolders
@@ -105,6 +110,9 @@ class ModFramework (QMainWindow):
     def report(self):
        url = "https://github.com/DYCAMAX/Plunger/issues/new"
        webbrowser.open(url)
+
+   
+       
     
 if __name__ == "__main__":
     app = QApplication(sys.argv)
