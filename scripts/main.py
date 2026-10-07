@@ -2,6 +2,7 @@ import os
 import sys
 import webbrowser
 
+from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import (
     QApplication, QWidget, 
     QPushButton, QVBoxLayout,
@@ -28,12 +29,13 @@ class ModFramework (QMainWindow):
         self.setWindowTitle("Plunger")
         self.setGeometry(100, 100, 1280, 800)
         self.setWindowIcon(QIcon("/images/Plunger_icon.png"))
+        self.setWindowIcon(QtGui.QIcon('images/Plunger_icon.png'))
 
         # Pour le texte centré
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout()
-        label = QLabel("Please select a file, you want to replace")
+        label = QLabel("Please select a folders, Thanks for using Plunger !!!")
         label.setAlignment(Qt.AlignCenter)
         layout.addWidget(label)
 
@@ -110,9 +112,6 @@ class ModFramework (QMainWindow):
     def report(self):
        url = "https://github.com/DYCAMAX/Plunger/issues/new"
        webbrowser.open(url)
-
-   
-       
     
 if __name__ == "__main__":
     app = QApplication(sys.argv)

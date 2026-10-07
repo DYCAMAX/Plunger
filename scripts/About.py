@@ -10,7 +10,9 @@ class propos(QWidget):
         self.setWindowTitle("About US")
         self.size(600, 400)
 
-        # Pour les Texts
+        #Pour le Logo
+
+        # Pour le text
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout()
