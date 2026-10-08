@@ -1,5 +1,9 @@
+import os
 import sys 
+os.environ["QT_QPA_PLATFORM"] = "xcb"
+
 from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout
+from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt
 
 
@@ -8,14 +12,21 @@ class propos(QWidget):
         super().__init__()
 
         self.setWindowTitle("About US")
-        self.size(600, 400)
+        self.setFixedSize(900, 300)
 
         #Pour le Logo
-
-        # Pour le text
-        central_widget = QWidget()
-        self.setCentralWidget(central_widget)
+        FUCKINGLOGO = QLabel()
+        FUCKINGLOGO.setPixmap(QPixmap("images/Plunger_Logo.png").scaled(500, 400, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        FUCKINGLOGO.setAlignment(Qt.AlignCenter)
         layout = QVBoxLayout()
-        label = QLabel("Plunger is a tool for modders, you can create mod for Rayman Raving Rabbids 1 (Wii) and coming for all Rabbids games ever released.")
+        self.setLayout(layout)
+        layout.addWidget(FUCKINGLOGO)
+        layout.addStretch()
+
+        # Pour le Text en bas du logo expliquant a quoi sert le logiciel
+        central_widget = QWidget()
+        label = QLabel("Plunger is a tool for modders made by DYCAMAX, you can create mod for Rayman Raving Rabbids 1 (Wii) and coming for all Rabbids games ever released.")
         label.setAlignment(Qt.AlignCenter)
         layout.addWidget(label)
+        layout.addLayout(layout)
+       

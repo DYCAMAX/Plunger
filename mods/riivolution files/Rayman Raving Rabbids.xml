@@ -1,16 +1,15 @@
 <wiidisc version="1">
-<id game="RRR1"/>
+<id game="RRBP41"/>
 <options>
 <section name="Testing">
-<option name="/RRR1 Replacement">
+<option name="" id="Test" default="1">
 <choice name="Enabled">
-<patch id="rrr1folders"/>
+<patch id="Test"/>
 </choice>
 </option>
 </section>
 </options>
-<patch id="rrr1folders">
-<folder external="/rrr1" recursive="false"/>
-<folder external="/rrr1" disc="/"/>
+<patch id="Test">
+<file disc="/files/Bonus_10.bik" external="/Test/Bonus_10.bik"/>
 </patch>
 </wiidisc>

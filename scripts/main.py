@@ -1,6 +1,7 @@
 import os
 import sys
 import webbrowser
+os.environ["QT_QPA_PLATFORM"] = "xcb"
 
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import (
@@ -17,6 +18,7 @@ from PyQt5.QtWidgets import (
 from settings import Preference
 from explorer import ExplorerFolders
 from About import propos
+from compile import compiler
 from Convert import convert
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import Qt, QDir
@@ -49,7 +51,7 @@ class ModFramework (QMainWindow):
         ouvrir_action.triggered.connect(self.open_folders)
 
         ouvrir_action = file_menu.addAction("Compile")
-        ouvrir_action.triggered.connect(self.open_folders)
+        ouvrir_action.triggered.connect(self.compiler)
 
         ouvrir_action = file_menu.addAction("Save the project")
         ouvrir_action.triggered.connect(self.save_folders)
@@ -87,6 +89,10 @@ class ModFramework (QMainWindow):
       self.merde = ExplorerFolders
       self.merde.show()
 
+    def compiler(self):
+       self.compile = compiler()
+       self.compile.show()
+
     def open_preference(self):
       self.preference = Preference()
       self.preference.show()
@@ -102,12 +108,16 @@ class ModFramework (QMainWindow):
     def save_folders(self):
        folders, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File and Bink Video  (*.bf *.bik*)", )
        self.merde = ExplorerFolders
-       self.merde.show()
+       if not self.merde:
+          sys.exit()   
+          self.merde.show()
 
     def load_folders(self):
        folders, _ = QFileDialog.getOpenFileName(self, "choose your folders")
        self.merde = ExplorerFolders
-       self.merde.show()
+       if not self.merde:
+         sys.exit()
+         self.merde.show()
 
     def report(self):
        url = "https://github.com/DYCAMAX/Plunger/issues/new"

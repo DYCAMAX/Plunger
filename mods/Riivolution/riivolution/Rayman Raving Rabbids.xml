@@ -1,0 +1,16 @@
+<wiidisc version="1">
+<id game="RRR1"/>
+<options>
+<section name="Testing">
+<option name="/RRR1 Replacement">
+<choice name="Enabled">
+<patch id="rrr1folders"/>
+</choice>
+</option>
+</section>
+</options>
+<patch id="rrr1folders">
+<folder external="/rrr1" recursive="false"/>
+<folder external="/rrr1" disc="/"/>
+</patch>
+</wiidisc>
