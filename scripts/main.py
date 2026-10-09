@@ -26,11 +26,9 @@ from PyQt5.QtCore import Qt, QDir
 # Specification de la fénétre
 class ModFramework (QMainWindow):
     def __init__(self):
-
         super().__init__()
         self.setWindowTitle("Plunger")
         self.setGeometry(100, 100, 1280, 800)
-        self.setWindowIcon(QIcon("/images/Plunger_icon.png"))
         self.setWindowIcon(QtGui.QIcon('images/Plunger_icon.png'))
 
         # Pour le texte centré
@@ -86,12 +84,12 @@ class ModFramework (QMainWindow):
     # Section definition 
     def open_folders(self):
       dir_ = QFileDialog.getExistingDirectory(None, 'Select project folder:', 'F:\\', QFileDialog.ShowDirsOnly)
-      self.merde = ExplorerFolders
+      self.merde = ExplorerFolders()
       self.merde.show()
 
     def compiler(self):
-       self.compile = compiler()
-       self.compile.show()
+      self.compile = compiler()
+      self.compile.show()
 
     def open_preference(self):
       self.preference = Preference()
@@ -102,11 +100,11 @@ class ModFramework (QMainWindow):
       self.propos.show()
 
     def convert(self):
-       self.fuck = convert
-       self.fuck.show
+      self.fuck = convert
+      self.fuck.show()
 
     def save_folders(self):
-       folders, _ = QFileDialog.getOpenFileName(self, "Choose a file", ".", "Big File and Bink Video  (*.bf *.bik*)", )
+       folders, _ = QFileDialog.getExistingDirectory(None, 'Select project folder:', 'F:\\', QFileDialog.ShowDirsOnly)
        self.merde = ExplorerFolders
        if not self.merde:
           sys.exit()   
