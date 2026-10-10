@@ -1,5 +1,6 @@
 import sys 
-from PyQt5.QtWidgets import QWidget, QPushButton
+
+from PyQt5.QtWidgets import QWidget, QPushButton, QCheckBox
 
 
 class Preference(QWidget):
@@ -9,7 +10,11 @@ class Preference(QWidget):
         self.setWindowTitle("Preference")
         self.resize(600, 400)
 
-        # Bouton: Activer Discord Rich presence
-        self.btn = QPushButton("Activate Discord Rich Presence", self)
-        self.btn.setCheckable(True)
-        self.btn.move(50, 50)
+        # Cocher: Activer Discord Rich presence
+        self.checkbox = QCheckBox("Activate Discord Rich Presence", self)
+        self.checkbox.stateChanged.connect(self.activate_discord)
+
+
+    def activate_discord(self):
+         self.weeb = RPC
+         self.weeb.show()

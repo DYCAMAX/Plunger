@@ -17,7 +17,7 @@ class ExplorerFolders(QWidget):
         self.setGeometry(self.left, self.top, self.width, self.height)
         
         self.model = QFileSystemModel()
-        self.model.setrootPath('')
+        self.model.setRootPath('')
         self.tree = QTreeView()
         self.tree.setModel(self.model)
         

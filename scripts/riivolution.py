@@ -199,7 +199,11 @@ class riivolution(QWidget):
         new_text ='<file disc="/sound/Roland/gm16adpcm.pcm" external="/{IdProject}/sound/Roland/gm16adpcm.pcm/>'
         line_file = 100
         new_text ='<file disc="/sound/Roland/gm16adpcm.wt" external="/{IdProject}/sound/Roland/gm16adpcm.wt/>'
-
-
-        line_file = 150
+        line_file = 101
+        new_text = '<file disc="/sound/Roland/gm16pcm.pcm" external="/{IdProject}/sound/Roland/gm16pcm.pcm/>'
+        line_file = 102
+        new_text = '<file disc="/sound/Roland/gm16pcm.wt" external="/{IdProject}/sound/Roland/gm16pcm.wt/>'
+        line_file = 103
+        new_text = '<file disc="/TUTO/1_2_3_Soleil.bik" external="/{IdProject}/TUTO/1_2_3_Soleil.bik"/>'
+        line_file = 104
         new_text = '<file disc="/TUTO/1_2_3_Soleil.bik" external="/{IdProject}/TUTO/1_2_3_Soleil.bik"/>'

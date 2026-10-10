@@ -10,7 +10,7 @@ try:
 
     # Discord Rich Presence Status
     RPC.update(
-        state="Create a mod",
+        state="Create a mod on Rabbids Games",
         details="",
         large_image="image_key", 
         large_text="Hover Text",
