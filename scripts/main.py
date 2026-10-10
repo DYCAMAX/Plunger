@@ -100,7 +100,7 @@ class ModFramework (QMainWindow):
       self.propos.show()
 
     def convert(self):
-      self.fuck = convert
+      self.fuck = convert()
       self.fuck.show()
 
     def save_folders(self):

@@ -18,6 +18,15 @@ class NameProject(QWidget):
         Bruh.setLayout(layout)
         Bruh.show()
 
+    def running (self):
+        os.mkdir("{NameProject}") # valeur donné par l'utilisateur
+        os.makedirs("{NameProject}/riivolution")
+        os.makedirs("{NameProject}/riivolution/config")
+        os.makedirs("{NameProject}/contents")
+        os.makedirs("{NameProject}/contents/TUTO") # si le mod en a besoin
+        os.makedirs("{NameProject}/contents/sound") # si le mod en a besoin
+        os.makedirs("{NameProject}/contents/HomeButton2") # si le mod en a besoin
+
 
 
 

@@ -3,16 +3,15 @@ import sys
 import os
 import shutil
 from PyQt5.QtWidgets import QWidget, QTextEdit
-from compile import compiler
 
 class riivolution(QWidget):
      def __init__(self):
         super().__init__()
 
-        Project_Folders = QWidget
         riivolution_ecriture = QTextEdit
 
-        shutil.copy('mods/riivolution files/Rayman Raving Rabbids.xml', (Project_Folders))
+        
+        shutil.copy('mods/riivolution files/Rayman Raving Rabbids.xml', (self.Project_Folders))
 
      def Project_Folders(self):
           self
@@ -206,4 +205,6 @@ class riivolution(QWidget):
         line_file = 103
         new_text = '<file disc="/TUTO/1_2_3_Soleil.bik" external="/{IdProject}/TUTO/1_2_3_Soleil.bik"/>'
         line_file = 104
-        new_text = '<file disc="/TUTO/1_2_3_Soleil.bik" external="/{IdProject}/TUTO/1_2_3_Soleil.bik"/>'
+        new_text = '<file disc="/TUTO/batatolls.bik" external="/{IdProject}/TUTO/batatolls.bik"/>'
+        line_file = 105
+        new_text = '<file disc="/TUTO/batatolls2.bik" external="/{IdProject}/TUTO/batatolls2.bik"/>'

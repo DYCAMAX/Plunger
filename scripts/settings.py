@@ -8,7 +8,7 @@ class Preference(QWidget):
         super().__init__()
 
         self.setWindowTitle("Preference")
-        self.resize(600, 400)
+        self.resize(1000, 600)
 
         # Cocher: Activer Discord Rich presence
         self.checkbox = QCheckBox("Activate Discord Rich Presence", self)

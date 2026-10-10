@@ -12,11 +12,11 @@ class propos(QWidget):
         super().__init__()
 
         self.setWindowTitle("About US")
-        self.setFixedSize(900, 300)
+        self.setFixedSize(900, 400)
 
         #Pour le Logo
         FUCKINGLOGO = QLabel()
-        FUCKINGLOGO.setPixmap(QPixmap("images/Plunger_Logo.png").scaled(500, 400, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        FUCKINGLOGO.setPixmap(QPixmap("images/Plunger_Logo.png").scaled(700, 600, Qt.KeepAspectRatio, Qt.SmoothTransformation))
         FUCKINGLOGO.setAlignment(Qt.AlignCenter)
         layout = QVBoxLayout()
         self.setLayout(layout)
