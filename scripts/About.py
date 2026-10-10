@@ -11,7 +11,7 @@ class propos(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("About US")
+        self.setWindowTitle("About")
         self.setFixedSize(900, 400)
 
         #Pour le Logo
