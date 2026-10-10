@@ -2,7 +2,7 @@
 <id game="RRBP41"/>
 <options>
 <section name="Testing">
-<option name="" id="Test" default="1">
+<option name="" id="" default="1">
 <choice name="Enabled">
 <patch id="Test"/>
 </choice>
