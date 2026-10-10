@@ -4,6 +4,7 @@ Plunger is a tool that allows you to create a mod on Rayman Raving Rabbids (Wii)
 Requirements:
 - [Dolphin](https://dolphin-emu.org/?nocr=true) or equivalent
 - [Rayman Raving Rabbids](https://en.wikipedia.org/wiki/Rayman_Raving_Rabbids) Wii ISO (Obtained legally, no ISO will be given)
+- [RAD Video Tools](https://www.radgametools.com/bnkdown.htm) for video convert in .bik file
 
 # Tutorial:
 ## Windows
