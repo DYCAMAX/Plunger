@@ -8,11 +8,11 @@ Requirements:
 
 # Tutorial:
 ## Windows
-- [Downlaod Latest Version](https://github.com/DYCAMAX/Rabbids-Mod-Framework/releases)
+- [Downlaod Latest Version](https://github.com/DYCAMAX/Rabbids-Mod-Framework/releases) (COMING SOON)
 - Just Launch the .exe lol.
 
 ## Linux
-- [Downlaod Latest Version](https://github.com/DYCAMAX/Rabbids-Mod-Framework/releases)
+- [Downlaod Latest Version](https://github.com/DYCAMAX/Rabbids-Mod-Framework/releases) (COMING SOON)
 - Debian/Ubuntu:
   ```sh
   sudo apt update
