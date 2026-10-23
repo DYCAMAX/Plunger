@@ -10,7 +10,6 @@ class riivolution(QWidget):
 
         riivolution_ecriture = QTextEdit
 
-        
         shutil.copy('mods/riivolution files/Rayman Raving Rabbids.xml', (self.Project_Folders))
 
      def Project_Folders(self):

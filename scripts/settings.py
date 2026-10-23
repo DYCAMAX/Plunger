@@ -13,8 +13,8 @@ class Preference(QWidget):
         # Cocher: Activer Discord Rich presence
         self.checkbox = QCheckBox("Activate Discord Rich Presence", self)
         self.checkbox.stateChanged.connect(self.activate_discord)
+        
 
 
     def activate_discord(self):
-         self.weeb = RPC
-         self.weeb.show()
+         self
